@@ -1,106 +1,112 @@
-/*Estilos de la seccion de proyectos*/
-.proyectos{
-    width: 80%; /*ancho del contenedor*/
-    margin: 0 auto; /*centra el contenedor*/    
-    padding: 2rem; /*espacio interno*/
-    background: var(--fondo-proyectos); /*color de fondo*/  
-    
+/* Variables de color */
+:root {
+    --fondo-proyectos: #872d22; /* Fondo de la sección de proyectos */
+    --borde-proyectos: #6e241b; /* Borde de la tarjeta */
+    --sombra-proyectos: #a7362d; /* Sombra */
+    --text-color: #ffffff; /* Color de texto */
+    --highlight-color: #ffb5a7; /* Color de acento */
+    --boton-bg: #5a1d15; /* Fondo del botón */
+    --boton-hover-bg: #d45b4a; /* Fondo del botón en hover */
 }
-/*contenedor general que engloba los proyectos*/
- .galeria-proyectos{
+
+/* Estilos de la sección de proyectos */
+.proyectos {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--fondo-proyectos);
+    border-radius: 10px;
+}
+
+/* Contenedor general que engloba los proyectos */
+.galeria-proyectos {
     display: flex;
-    flex-wrap: wrap; /*envuelve los elementos*/
-    gap: 2rem; /*espacio entre los elementos*/
-    justify-content: center; /*centra el contenido*/
-    margin-top: 2rem; /* Espacio superior */
-}
-/*Como es el contenedor de cada proyecto*/
-.proyecto{
-    background-color: rgb(25, 1, 48); /*color de fondo de la tarjeta*/
-    border: 1px solid #45275d; /*borde de la tarjeta*/
-    border-radius: 5px; /*bordes redondeados*/
-    padding: 15px; /*espacio interno*/
-    margin: 0 0 2rem; /*margen*/
-    width: calc(33% - 40px); /*ancho de la tarjeta*/
-    box-shadow: 1px 2px 5px #af9fb6; /*sombra*/
-    text-align: center; /*alineacion del texto*/
-   
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
-
-/*imagen del proyecto*/
-.proyectos img{
-    width: 100%; /*ancho de la imagen*/
-    height: auto; /*alto de la imagen*/
-    border-radius: 5px; /*bordes redondeados*/
-    transition: transform 0.3s ease; /* Transición suave */
+/* Contenedor de cada proyecto */
+.proyecto {
+    background-color: var(--nav-item-bg);
+    border: 1px solid var(--borde-proyectos);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 2rem;
+    width: calc(33% - 40px);
+    box-shadow: 1px 2px 5px var(--sombra-proyectos);
+    text-align: center;
 }
+
+/* Imagen del proyecto */
+.proyectos img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
 .proyectos img:hover {
-    transform: scale(1.05); /* Efecto de zoom en la imagen */
+    transform: scale(1.05);
 }
 
-/*titulo del proyecto*/
-.proyectos h3{
-    margin-top: 10px; /* Margen superior */
-    font-size: 1.4rem; /* Tamaño de la fuente */
-    color: var(--highlight-color); /* Color de acento */
+/* Título del proyecto */
+.proyectos h3 {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: var(--highlight-color);
 }
-/*descripcion del proyecto*/
-.proyectos p{
-    margin-top: 10px 0; /* Margen superior e inferior */
+
+/* Descripción del proyecto */
+.proyectos p {
+    margin: 10px 0;
     font-size: 1rem;
-    color: #eaeaea; /* Color claro para el texto */
+    color: var(--text-color);
 }
 
-/*boton de enlaces ancor*/
-.proyectos a{
-    display: inline-block; /*bloque en linea*/
-    margin-top: 10px; /*margen superior*/
-    padding: 10px 15px; /*espacio interno*/
-    background: #3f2962; /*color de fondo*/
-    color: #fff; /*color de la fuente*/
-    border-radius: 5px; /*bordes redondeados*/
-    font-size: 1.1rem; /* Tamaño de la fuente */
-    letter-spacing: 1px; /* Espaciado entre letras */
-    transition: background 0.3s ease, transform 0.3s ease; /* Efectos de transición */
-}
-/*boton al pasar el mouse*/
-.proyectos a:hover{
-    background: #683899; /*color de fondo al pasar el mouse*/
-    transform: translateY(-5px); /* Efecto de desplazamiento al pasar el mouse */
+/* Botón de enlace */
+.proyectos a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--boton-bg);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/*Responsive design*/
-/* Media Queries agrupadas */
-/* Pantallas pequeñas (móviles) */
+/* Botón al pasar el mouse */
+.proyectos a:hover {
+    background: var(--boton-hover-bg);
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .proyecto {
-        width: calc(100% - 40px); /* Ancho de la tarjeta */
+        width: calc(100% - 40px);
     }
 
     .proyectos h3 {
-        font-size: 1.2rem; /* Ajustar tamaño de fuente para móviles */
+        font-size: 1.2rem;
     }
 }
 
-/* Pantallas medianas (tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .proyecto {
-        width: calc(50% - 40px); /* Ancho de la tarjeta */
+        width: calc(50% - 40px);
     }
 
     .proyectos h3 {
-        font-size: 1.3rem; /* Ajustar tamaño de fuente */
+        font-size: 1.3rem;
     }
 }
 
-/* Pantallas grandes (desktops) */
 @media (min-width: 1024px) {
     .proyecto {
-        width: calc(33% - 40px); /* Ancho de la tarjeta */
-    }
-
-    .proyectos h3 {
-        font-size: 1.4rem; /* Ajustar tamaño de fuente */
+        width: calc(33% - 40px);
     }
 }

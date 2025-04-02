@@ -1,52 +1,137 @@
-/*seccion de sobremi*/
+/* Estilos generales para el footer */
+footer {
+    background-color: var(--nav-bg-color); /* Fondo coherente con la barra de navegación */
+    color: var(--text-color); /* Texto en color principal */
+    padding: 20px 0; /* Espaciado interno arriba y abajo */
+    text-align: center; /* Centrar el texto */
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    max-width: none; /* Elimina la restricción de ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    display: flex; /* Usar flexbox para el layout */
+    flex-direction: column; /* Colocar los elementos en una columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    gap: 1rem;
+}
+
+/* Estilos para la sección de información del footer */
+.footer-info {
+    margin-bottom: 10px; /* Espacio debajo de la información */
+    font-size: 1.1rem;
+    color: var(--highlight-color); /* Color de acento */
+}
+
+/* Estilos para la sección de estudios */
+.estudios {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    padding: 2rem; /* Espacio interno */
+    color: azure; /* Color de la fuente */
+    background-color: var(--nav-bg-color); /* Fondo oscuro como el footer */
+    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+}
+
+.container-estudios {
+    width: 100%; /* Ancho del contenedor */
+    padding: 1rem; /* Espacio interno */
+    margin-top: 5rem; /* Margen superior */
+    line-height: 2.5rem; /* Espacio entre los párrafos */
+    font-size: large; /* Tamaño de la fuente */
+    margin: 8rem; /* Margen superior e inferior */
+    text-align: center;
+}
+
+/* Estilos para el botón Ver más */
+.container-estudios a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--highlight-color); /* Color de acento */
+    color: var(--nav-bg-color); /* Texto en color oscuro */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-top: 20px; /* Espacio superior */
+}
+
+.container-estudios a:hover {
+    background-color: var(--text-color); /* Cambio de color al pasar el mouse */
+    color: var(--nav-bg-color);
+}
+
+/* Sección de Sobre Mí */
 .sobremi {
     display: flex;
-    justify-content: center; /*centra el contenido*/
+    justify-content: center; /* Centra el contenido */
+    background-color: white; /* Fondo blanco */
+    color: black; /* Texto en negro */
+    padding: 2rem;
+    width: 100%;
 }
 
 .container-sobremi {
     display: flex;
-    width: 50%; /*ancho del contenedor*/
-    padding: 2rem; /*espacio interno*/
-    margin-top: 5rem; /*margen superior*/
-    line-height: 2.5rem; /*espacio entre los parrafos*/
-    font-size: large; /*tamaño de la fuente*/
-    color: azure; /*color de la fuente*/
-    gap: 2rem; /*espacio entre los elementos*/
-    align-items: center; /*alinea los elementos al centro*/
-
+    width: 50%; /* Ancho del contenedor */
+    padding: 2rem; /* Espacio interno */
+    margin-top: 5rem; /* Margen superior */
+    line-height: 2.5rem; /* Espacio entre los párrafos */
+    font-size: large; /* Tamaño de la fuente */
+    gap: 2rem; /* Espacio entre los elementos */
+    align-items: center; /* Alinea los elementos al centro */
 }
 
 .img-perfil {
-    border-radius: 50%;/*bordes redondeados*/
+    border-radius: 50%; /* Bordes redondeados */
 }
 
-/*Responsive design*/
-/* Media Queries agrupadas */
-
-/* Estilos para pantallas pequeñas, celular de 768px o menos */
+/* Responsive design */
 @media (max-width: 768px) {
+    .container-estudios {
+        width: 100%; /* Ancho del contenedor */
+        margin-top: 0rem; /* Margen superior */
+    }
+    .estudios {
+        width: 100%; /* Ancho del contenedor */
+        padding: 1rem; /* Espacio interno */
+        margin-top: 1rem; /* Margen superior */
+        font-size: small; /* Tamaño de la fuente */
+    }
     .container-sobremi {
-        width: 100%; /*ancho del contenedor*/
-        padding: 1rem; /*espacio interno*/
-        margin-top: 1rem; /*margen superior*/
-        line-height: 2.5rem; /*espacio entre los parrafos*/
-        font-size: small; /*tamaño de la fuente*/
-        flex-direction: column; /*cambia la direccion de los elementos*/
+        width: 100%; /* Ancho del contenedor */
+        flex-direction: column; /* Cambia la dirección de los elementos */
     }
 }
 
-/* Estilos para pantallas medianas, tablet de 768px a 1024px */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+    .estudios {
+        width: 75%; /* Ancho del contenedor */
+    }
+    .container-estudios-section {
+        display: flex; /* Flexbox */
+        align-items: center; /* Centra el contenido */
+        width: 100%; /* Ancho del contenedor */
+        gap: 2rem; /* Espacio entre los elementos */
+    }
     .container-sobremi {
-        width: 75%; /*ancho del contenedor*/
+        width: 75%; /* Ancho del contenedor */
     }
 }
 
-
-/* Estilos para pantallas grandes, desktop de 1024px o más */
 @media (min-width: 1024px) {
+    .estudios {
+        width: 75%; /* Ancho del contenedor */
+    }
+    .container-estudios-section {
+        display: flex; /* Flexbox */
+        align-items: center; /* Centra el contenido */
+        width: 100%; /* Ancho del contenedor */
+        gap: 2rem; /* Espacio entre los elementos */
+    }
     .container-sobremi {
-        width: 50%; /*ancho del contenedor*/
+        width: 50%; /* Ancho del contenedor */
     }
 }
